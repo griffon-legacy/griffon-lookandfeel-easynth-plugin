@@ -14,25 +14,15 @@
  * limitations under the License.
  */
 
+package griffon.lookandfeel.easynth
+
+import griffon.lookandfeel.AbstractLookAndFeelTestCase
+
 /**
  * @author Andres Almiray
  */
-class LookandfeelEasynthGriffonPlugin {
-    def version = 0.1
-    def griffonVersion = '0.3.2 > *'
-    def dependsOn = [lookandfeel: 0.1]
-    def toolkits = ['swing']
-    def license = 'Apache Software License 2.0'
-
-    def author = 'Andres Almiray'
-    def authorEmail = 'aalmiray@users.sourceforge.net'
-    def title = 'EaSynth Swing Look & Feel'
-    def description = '''
-EaSynth Swing Look & Feel.
-http://www.easynth.com
-'''
-
-    // URL to the plugin's documentation
-    def documentation = 'http://griffon.codehaus.org/Lookandfeel+EaSynth+Plugin'
+class EaSynthLookAndFeelTests extends AbstractLookAndFeelTestCase {
+    void testEaSynthEaSynthLookAndFeel() {
+        setAndTestLookAndFeel('EaSynth', 'EaSynth')
+    }
 }
-
